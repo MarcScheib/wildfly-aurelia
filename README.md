@@ -1,0 +1,1 @@
+Setting up basic project architecture to use Aurelia.io as the frontend together with a Java EE backend on Wildfly
