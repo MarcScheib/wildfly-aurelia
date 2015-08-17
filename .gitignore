@@ -1,6 +1,9 @@
 # Created by https://www.gitignore.io/api/intellij
 
 wildfly-10.0.0.Beta1/*
+*/*/target/**
+*/target/**
+
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 

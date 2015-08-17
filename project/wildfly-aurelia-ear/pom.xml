@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-    <artifactId>project</artifactId>
-    <groupId>de.legendsrising</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
 
-    <groupId>de.legendsrising</groupId>
+    <parent>
+        <artifactId>project</artifactId>
+        <groupId>de.legendsrising</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <artifactId>wildfly-aurelia-ear</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>wildfly-aurelia-ear</name>
+
     <packaging>ear</packaging>
 
-    <name>wildfly-aurelia-ear</name>
+    <dependencies>
+        <dependency>
+            <groupId>de.legendsrising</groupId>
+            <artifactId>wildfly-aurelia-ejb</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>de.legendsrising</groupId>
+            <artifactId>wildfly-aurelia-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>de.legendsrising</groupId>
+            <artifactId>wildfly-aurelia-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-  
+
     <build>
         <plugins>
             <plugin>
@@ -36,9 +58,24 @@
                 <configuration>
                     <version>6</version>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                        <ejbModule>
+                            <groupId>de.legendsrising</groupId>
+                            <artifactId>wildfly-aurelia-ejb</artifactId>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>de.legendsrising</groupId>
+                            <artifactId>wildfly-aurelia-web</artifactId>
+                            <context-root>/</context-root>
+                        </webModule>
+                        <jarModule>
+                            <groupId>de.legendsrising</groupId>
+                            <artifactId>wildfly-aurelia-api</artifactId>
+                        </jarModule>
+                    </modules>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    
+
 </project>
