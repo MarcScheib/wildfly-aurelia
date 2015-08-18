@@ -24,15 +24,11 @@
         <dependency>
             <groupId>de.legendsrising</groupId>
             <artifactId>wildfly-aurelia-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.legendsrising</groupId>
             <artifactId>wildfly-aurelia-ejb</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>ejb</type>
             <scope>provided</scope>
         </dependency>
 
