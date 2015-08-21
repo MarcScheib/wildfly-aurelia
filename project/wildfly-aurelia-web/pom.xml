@@ -6,11 +6,11 @@
     <parent>
         <artifactId>project</artifactId>
         <groupId>de.legendsrising</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
 
     <artifactId>wildfly-aurelia-web</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>wildfly-aurelia-web</name>
 
     <packaging>war</packaging>
@@ -37,6 +37,11 @@
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 
