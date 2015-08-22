@@ -4,21 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>project</artifactId>
         <groupId>de.legendsrising</groupId>
+        <artifactId>project</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>wildfly-aurelia-ejb</artifactId>
-    <version>1.0</version>
     <name>wildfly-aurelia-ejb</name>
-
     <packaging>ejb</packaging>
-
-    <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -30,7 +23,6 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

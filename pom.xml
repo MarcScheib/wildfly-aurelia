@@ -7,11 +7,24 @@
     <artifactId>wildfly-aurelia</artifactId>
     <version>1.0</version>
     <name>wildfly-aurelia</name>
-
     <packaging>pom</packaging>
 
     <modules>
         <module>project</module>
         <module>integration-test</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+
+        <javaee.version.api>7.0</javaee.version.api>
+        <javaee.version.webapi>7.0</javaee.version.webapi>
+        <javaee.version.servlet>3.1.0</javaee.version.servlet>
+
+        <test.version.junit>3.8.1</test.version.junit>
+    </properties>
 </project>
