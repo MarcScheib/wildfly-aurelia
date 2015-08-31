@@ -24,19 +24,19 @@
         <!-- internal -->
         <dependencies>
             <dependency>
-                <groupId>wildfly-aurelia</groupId>
+                <groupId>de.legendsrising</groupId>
                 <artifactId>wildfly-aurelia-api</artifactId>
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
             <dependency>
-                <groupId>wildfly-aurelia</groupId>
+                <groupId>de.legendsrising</groupId>
                 <artifactId>wildfly-aurelia-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
             <dependency>
-                <groupId>wildfly-aurelia</groupId>
+                <groupId>de.legendsrising</groupId>
                 <artifactId>wildfly-aurelia-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>

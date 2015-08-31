@@ -23,6 +23,7 @@
             <groupId>de.legendsrising</groupId>
             <artifactId>wildfly-aurelia-ejb</artifactId>
             <scope>provided</scope>
+            <type>ejb</type>
         </dependency>
 
         <dependency>
