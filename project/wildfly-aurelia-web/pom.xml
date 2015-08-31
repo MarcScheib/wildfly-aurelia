@@ -4,21 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>project</artifactId>
         <groupId>de.legendsrising</groupId>
-        <version>1.0</version>
+        <artifactId>project</artifactId>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>wildfly-aurelia-web</artifactId>
-    <version>1.0</version>
     <name>wildfly-aurelia-web</name>
-
     <packaging>war</packaging>
-
-    <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -30,18 +23,18 @@
             <groupId>de.legendsrising</groupId>
             <artifactId>wildfly-aurelia-ejb</artifactId>
             <scope>provided</scope>
+            <type>ejb</type>
         </dependency>
 
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

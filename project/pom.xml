@@ -4,22 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>wildfly-aurelia</artifactId>
         <groupId>de.legendsrising</groupId>
-        <version>1.0</version>
+        <artifactId>wildfly-aurelia</artifactId>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>project</artifactId>
-    <version>1.0</version>
     <name>project</name>
-
     <packaging>pom</packaging>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <maven.compiler.source>1.7</maven.compiler.source>
-    </properties>
 
     <modules>
         <module>wildfly-aurelia-api</module>
@@ -29,24 +21,50 @@
     </modules>
 
     <dependencyManagement>
+        <!-- internal -->
         <dependencies>
             <dependency>
-                <groupId>wildfly-aurelia</groupId>
+                <groupId>de.legendsrising</groupId>
                 <artifactId>wildfly-aurelia-api</artifactId>
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
             <dependency>
-                <groupId>wildfly-aurelia</groupId>
+                <groupId>de.legendsrising</groupId>
                 <artifactId>wildfly-aurelia-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
             <dependency>
-                <groupId>wildfly-aurelia</groupId>
+                <groupId>de.legendsrising</groupId>
                 <artifactId>wildfly-aurelia-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
+            </dependency>
+
+            <!-- external -->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee.version.api}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>${javaee.version.webapi}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javaee.version.servlet}</version>
+            </dependency>
+
+            <!-- testing -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${test.version.junit}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
