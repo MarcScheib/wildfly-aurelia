@@ -6,7 +6,7 @@
     <parent>
         <groupId>de.legendsrising</groupId>
         <artifactId>project</artifactId>
-        <version>1.0.0</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>wildfly-aurelia-ear</artifactId>
