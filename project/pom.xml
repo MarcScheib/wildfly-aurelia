@@ -58,6 +58,11 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${javaee.version.servlet}</version>
             </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${log.version.slf4j}</version>
+            </dependency>
 
             <!-- testing -->
             <dependency>

@@ -24,6 +24,7 @@
         <javaee.version.api>7.0</javaee.version.api>
         <javaee.version.webapi>7.0</javaee.version.webapi>
         <javaee.version.servlet>3.1.0</javaee.version.servlet>
+        <log.version.slf4j>1.7.12</log.version.slf4j>
 
         <test.version.junit>3.8.1</test.version.junit>
     </properties>
