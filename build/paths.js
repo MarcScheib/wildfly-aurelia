@@ -1,6 +1,6 @@
 var path = require('path');
 
-var appRoot = 'project/wildfly-aurelia-web/src/main/resources/assets/';
+var appRoot = 'project/wildfly-aurelia-web/src/resources/assets/';
 var outputRoot = 'project/wildfly-aurelia-web/src/main/webapp/assets/';
 
 module.exports = {

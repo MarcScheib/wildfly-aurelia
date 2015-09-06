@@ -1,0 +1,23 @@
+<template>
+  <require from="../elements/loading-indicator"></require>
+  <require from="../elements/contact-list"></require>
+
+  <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse"
+            data-target="#navigation-top-collapse">
+      &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs" id="navigation-top-collapse">
+      <a class="navbar-brand" href="#">WildFly-Aurelia</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <loading-indicator
+            loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+    <div class="row">
+      <contact-list class="col-md-4"></contact-list>
+      <router-view class="col-md-8"></router-view>
+    </div>
+  </div>
+</template>
