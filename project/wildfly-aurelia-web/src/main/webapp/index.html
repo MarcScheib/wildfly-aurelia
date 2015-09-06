@@ -1,10 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>WildFly-Aurelia</title>
+        <base href="/">
+
+        <link rel="stylesheet" href="assets/css/style.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
     </head>
-    <body>
-        <h1>Hello World!</h1>
+    <body aurelia-app="configuration/configuration">
+        <div class="splash">
+            <div class="message">WildFly-Aurelia</div>
+            <i class="fa fa-spinner fa-spin"></i>
+        </div>
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+            System.import('aurelia-bootstrapper');
+        </script>
     </body>
 </html>

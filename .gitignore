@@ -6,6 +6,8 @@ wildfly-10.0.0.Beta1/*
 /classes/**
 /project/.gradle/*
 node_modules/*
+project/wildfly-aurelia-web/src/main/webapp/jspm_packages/*
+project/wildfly-aurelia-web/src/main/webapp/assets/*
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio

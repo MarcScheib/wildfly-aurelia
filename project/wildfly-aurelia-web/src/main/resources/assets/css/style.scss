@@ -1,0 +1,7 @@
+/** vendor **/
+$fa-font-path : "../../jspm_packages/github/FortAwesome/font-awesome@4.4.0/fonts";
+@import "../../../webapp/jspm_packages/github/FortAwesome/font-awesome@4.4.0/scss/font-awesome";
+@import "../../../webapp/jspm_packages/github/twbs/bootstrap@4.0.0-alpha/scss/bootstrap.scss";
+
+/** project **/
+@import "_basic";
