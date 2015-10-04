@@ -8,9 +8,11 @@ import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 
 @Dependent
-public class Loggers {
+public class Loggers
+{
     @Produces
-    public Logger getLogger(InjectionPoint injectionPoint) {
+    public Logger getLogger(InjectionPoint injectionPoint)
+    {
         return LoggerFactory.getLogger(injectionPoint.getMember().getDeclaringClass().getSimpleName());
     }
 }

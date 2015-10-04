@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io/api/intellij
 
 wildfly-10.0.0.Beta1/*
+wildfly-10.0.0.CR2/*
 */*/target/**
 */target/**
 /classes/**
