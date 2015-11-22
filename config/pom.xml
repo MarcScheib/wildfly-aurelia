@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cycrilab</groupId>
+    <artifactId>config</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>config</name>
+    <packaging>war</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.2.Final</version>
+                <configuration>
+                    <executeCommands>
+                        <batch>false</batch>
+                        <scripts>
+                            <script>target/scripts/${cli.file}</script>
+                        </scripts>
+                    </executeCommands>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.36</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/scripts</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/scripts</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <filters>
+                                <filter>${basedir}/src/main/resources/configuration.properties</filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>install-driver</id>
+            <properties>
+                <cli.file>wildfly-install-mysql-driver.cli</cli.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>remove-driver</id>
+            <properties>
+                <cli.file>wildfly-remove-mysql-driver.cli</cli.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>add-ds</id>
+            <properties>
+                <cli.file>wildfly-add-data-source.cli</cli.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>remove-ds</id>
+            <properties>
+                <cli.file>wildfly-remove-data-source.cli</cli.file>
+            </properties>
+        </profile>
+    </profiles>
+</project>

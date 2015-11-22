@@ -1,0 +1,14 @@
+# Connect to Wildfly instance
+connect
+
+# Create MySQL JDBC Driver Module
+module add \
+    --name=com.mysql \
+    --resources=${settings.localRepository}/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar \
+    --dependencies=javax.api,javax.transaction.api
+
+# Add Driver Properties
+/subsystem=datasources/jdbc-driver=mysql: \
+    add( \
+        driver-name="mysql", \
+        driver-module-name="com.mysql")

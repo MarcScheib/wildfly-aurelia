@@ -1,0 +1,10 @@
+# Connect to Wildfly instance
+connect
+
+if (outcome == success) of /subsystem=datasources/jdbc-driver=mysql:read-attribute(name=driver-name)
+    # Remove Driver
+    /subsystem=datasources/jdbc-driver=mysql:remove
+end-if
+
+# Remove MySQL JDBC Driver Module
+module remove --name=com.mysql
