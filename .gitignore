@@ -4,6 +4,7 @@
 /project/.gradle/*
 node_modules/*
 jspm_packages/*
+dist/*
 project/wildfly-aurelia-web/src/main/webapp/jspm_packages/*
 project/wildfly-aurelia-web/src/main/webapp/assets/*
 
