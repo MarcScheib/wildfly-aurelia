@@ -79,7 +79,7 @@
       "aurelia-templating-binding": "npm:aurelia-templating-binding@^1.0.0",
       "aurelia-templating-resources": "npm:aurelia-templating-resources@^1.0.0",
       "aurelia-templating-router": "npm:aurelia-templating-router@^1.0.0",
-      "bootstrap": "github:twbs/bootstrap@4.0.0-alpha",
+      "bootstrap": "github:twbs/bootstrap@4.0.0-alpha.3",
       "fetch": "github:github/fetch@^0.11.1",
       "font-awesome": "github:FortAwesome/font-awesome@^4.6.3",
       "jquery": "github:components/jquery@^2.2.4",
@@ -90,29 +90,6 @@
       "babel": "npm:babel-core@^5.8.38",
       "babel-runtime": "npm:babel-runtime@^5.8.38",
       "core-js": "npm:core-js@^1.1.4"
-    },
-    "overrides": {
-      "github:twbs/bootstrap@4.0.0-alpha": {
-        "main": "dist/js/bootstrap",
-        "files": null,
-        "ignore": [
-          "dist/js/npm"
-        ],
-        "directories": {
-          "lib": "*"
-        },
-        "shim": {
-          "js/bootstrap": {
-            "deps": [
-              "jquery"
-            ],
-            "exports": "$"
-          }
-        },
-        "dependencies": {
-          "jquery": "github:components/jquery"
-        }
-      }
     }
   }
 }

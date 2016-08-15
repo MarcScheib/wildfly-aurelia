@@ -12,6 +12,7 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
@@ -31,7 +32,7 @@ System.config({
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
-    "bootstrap": "github:twbs/bootstrap@4.0.0-alpha",
+    "bootstrap": "github:twbs/bootstrap@4.0.0-alpha.3",
     "core-js": "npm:core-js@1.2.7",
     "fetch": "github:github/fetch@0.11.1",
     "font-awesome": "github:FortAwesome/font-awesome@4.6.3",
@@ -59,8 +60,9 @@ System.config({
     "github:rstacruz/nprogress@0.2.0": {
       "css": "github:systemjs/plugin-css@0.1.26"
     },
-    "github:twbs/bootstrap@4.0.0-alpha": {
-      "jquery": "github:components/jquery@2.2.4"
+    "github:twbs/bootstrap@4.0.0-alpha.3": {
+      "jquery": "npm:jquery@2.2.4",
+      "tether": "github:HubSpot/tether@1.3.4"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
