@@ -2,8 +2,6 @@ package de.legendsrising.rest;
 
 import de.legendsrising.model.Contact;
 
-import java.util.List;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,18 +15,22 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import java.util.List;
+
 @Stateless
 @ApplicationPath("/api/v1")
 @Path("contact")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ContactResource {
+public class ContactResource
+{
     @PersistenceContext
     private EntityManager entityManager;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Contact> listContacts() {
+    public List<Contact> listContacts()
+    {
         TypedQuery<Contact> query = this.entityManager.createNamedQuery(Contact.FIND_ALL, Contact.class);
 
         return query.getResultList();
@@ -36,13 +38,15 @@ public class ContactResource {
 
     @GET
     @Path("{id}")
-    public Contact getContact(@PathParam("id") Long id) {
+    public Contact getContact(@PathParam("id") Long id)
+    {
         return this.entityManager.find(Contact.class, id);
     }
 
     @DELETE
     @Path("{id}")
-    public void deleteContact(@PathParam("id") Long id) {
+    public void deleteContact(@PathParam("id") Long id)
+    {
         this.entityManager.remove(this.getContact(id));
     }
 }

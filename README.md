@@ -1,6 +1,6 @@
 # WildFly-Aurelia
 
-Setting up basic project architecture to use Aurelia.io as the frontend together with a Java EE backend on Wildfly
+Basic project architecture for JavaEE and [Aurelia][aurelia] on [WildFly][wildfly]. This example is based on the Aurelia Contacts App.
 
 ## Running the project
 
@@ -29,3 +29,8 @@ To run the app, follow these steps.
   jspm install
   ```
   >**Note:** Windows users, if you experience an error of "unknown command unzip" you can solve this problem by doing `npm install -g unzip` and then re-running `jspm install`.
+  
+
+[github]: https://github.com/MarcScheib/wildfly-aurelia
+[aurelia]: http://aurelia.io/
+[wildfly]: http://wildfly.org/
