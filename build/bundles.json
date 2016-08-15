@@ -1,0 +1,63 @@
+{
+  "force": true,
+  "baseURL": ".",
+  "configPath": "./config.js",
+  "bundles": {
+    "dist/app-build": {
+      "includes": [
+        "[**/*.js]",
+        "**/*.html!text"
+      ],
+      "options": {
+        "inject": true,
+        "minify": true,
+        "depCache": false,
+        "rev": true
+      }
+    },
+    "dist/aurelia": {
+      "includes": [
+        "aurelia-animator-css",
+        "aurelia-api",
+        "aurelia-authentication",
+        "aurelia-bootstrapper",
+        "aurelia-environment",
+        "aurelia-event-aggregator",
+        "aurelia-fetch-client",
+        "aurelia-framework",
+        "aurelia-history-browser",
+        "aurelia-loader-default",
+        "aurelia-logging-console",
+        "aurelia-notify",
+        "aurelia-notify/**/*.html!text",
+        "aurelia-notify/**/*.css!text",
+        "aurelia-router",
+        "aurelia-templating",
+        "aurelia-templating-binding",
+        "aurelia-templating-resources",
+        "aurelia-templating-router",
+        "aurelia-validation",
+        "aurelia-validation/resources/*"
+      ],
+      "options": {
+        "inject": true,
+        "minify": true,
+        "depCache": false,
+        "rev": true
+      }
+    },
+    "dist/vendor": {
+      "includes": [
+        "nprogress",
+        "jquery",
+        "bootstrap"
+      ],
+      "options": {
+        "inject": true,
+        "minify": false,
+        "depCache": true,
+        "rev": true
+      }
+    }
+  }
+}

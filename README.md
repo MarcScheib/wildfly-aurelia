@@ -1,6 +1,6 @@
 # WildFly-Aurelia
 
-Basic project architecture for JavaEE and [Aurelia][aurelia] on [WildFly][wildfly]. This example is based on the Aurelia Contacts App.
+Basic project architecture for JavaEE and [Aurelia][aurelia] on [WildFly][wildfly]. This example is based on the [Aurelia Contacts App][app-contacts].
 
 ## Running the project
 
@@ -34,3 +34,4 @@ To run the app, follow these steps.
 [github]: https://github.com/MarcScheib/wildfly-aurelia
 [aurelia]: http://aurelia.io/
 [wildfly]: http://wildfly.org/
+[app-contacts]: https://github.com/aurelia/app-contacts

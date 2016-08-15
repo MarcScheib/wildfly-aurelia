@@ -1,0 +1,19 @@
+{
+  "list": [
+    "index.html",
+    "config.js",
+    "aurelia.env",
+    "style/style.min.css",
+    "jspm_packages/system.js",
+    "jspm_packages/system-polyfills.js",
+    "jspm_packages/system-csp-production.js",
+    "jspm_packages/github/systemjs/plugin-text@0.0.4.js",
+    "jspm_packages/github/systemjs/plugin-text@0.0.4/text.js",
+    "jspm_packages/github/github/fetch@0.11.1.js",
+    "jspm_packages/github/github/fetch@0.11.1/fetch.js",
+    "jspm_packages/github/FortAwesome/font-awesome@4.6.3/fonts/*",
+    "dist/app-build-*.js",
+    "dist/aurelia-*.js",
+    "dist/vendor-*.js"
+  ]
+}
