@@ -5,6 +5,7 @@
 node_modules/*
 jspm_packages/*
 dist/*
+config/src/main/resources/local.properties
 project/wildfly-aurelia-web/src/main/webapp/jspm_packages/*
 project/wildfly-aurelia-web/src/main/webapp/assets/*
 

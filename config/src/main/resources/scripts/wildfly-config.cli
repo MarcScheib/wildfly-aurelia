@@ -1,0 +1,37 @@
+# Connect to Wildfly instance
+connect
+
+# Create MySQL JDBC Driver Module
+module add \
+    --name=com.mysql \
+    --resources=${settings.localRepository}/mysql/mysql-connector-java/${version.mysql.connector}/mysql-connector-java-${version.mysql.connector}.jar \
+    --dependencies=javax.api,javax.transaction.api
+
+# Add Driver Properties
+/subsystem=datasources/jdbc-driver=mysql: \
+    add( \
+        driver-name="mysql", \
+        driver-module-name="com.mysql")
+
+/subsystem=datasources/data-source=MysqlDS/:add(\
+    connection-url="${datasource.connection}",\
+    driver-name=mysql,\
+    jndi-name=${datasource.jndi},\
+    max-pool-size=20,\
+    min-pool-size=5,\
+    background-validation=true,\
+    background-validation-millis=300000,\
+    idle-timeout-minutes=15,\
+    allocation-retry=5,\
+    allocation-retry-wait-millis=1000,\
+    share-prepared-statements=true,\
+    prepared-statements-cache-size=50,\
+    statistics-enabled=true,\
+    valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker,\
+    exception-sorter-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter,\
+    user-name=${datasource.user},\
+    password=${datasource.password}\
+)
+/subsystem=datasources/data-source=MysqlDS/connection-properties=rewriteBatchStatements/:add(value=true)
+/subsystem=datasources/data-source=MysqlDS/connection-properties=useCursorFetch/:add(value=true)
+/subsystem=datasources/data-source=MysqlDS/connection-properties=defaultFetchSize/:add(value=1000)

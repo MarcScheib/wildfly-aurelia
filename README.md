@@ -30,6 +30,14 @@ To run the app, follow these steps.
   ```
   >**Note:** Windows users, if you experience an error of "unknown command unzip" you can solve this problem by doing `npm install -g unzip` and then re-running `jspm install`.
   
+## WildFly Configuration
+
+1. Ensure that WildFly is extracted somewhere on your drive.
+2. Add the path to the WildFly directory to the JBOSS_HOME env variable.
+3. Start the WildFly server.
+4. Adjust the `config/src/main/resources/configuration.properties` to your needs and save it as `local.properties`.
+5. On the cmd line, got to the config directory.
+6. Run `mvn process-resources wildfly:execute-commands -P "config"`
 
 [github]: https://github.com/MarcScheib/wildfly-aurelia
 [aurelia]: http://aurelia.io/
